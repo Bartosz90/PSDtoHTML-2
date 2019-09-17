@@ -25,3 +25,17 @@ main.addEventListener("click", () => {
     nav.classList.remove("active");
   }
 });
+
+//change headder img
+
+const img = document.querySelector(".header img");
+let index = 1;
+const changeImg = () => {
+  console.log(img.attributes.src.value);
+  setInterval(() => {
+    if (index === 4) index = 1;
+    img.attributes.src.value = `images/head${index}.jpg`;
+    index++;
+  }, 4000);
+};
+changeImg();
