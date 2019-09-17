@@ -1,0 +1,103 @@
+.nav 
+    position: fixed 
+    top: 0
+    left: -200px
+    width: 200px 
+    height: 100vh 
+    +flexCenter()
+    align-content: center
+    justify-content: flex-end
+    .navBtn 
+        position: relative
+        width: 85%
+        margin: 20px 0
+        padding: 9px
+        font-size: 22px
+        font-weight: bold
+        text-transform: uppercase
+        background-color: $dark
+        border-radius: 8px
+        cursor: pointer
+        transition: .3s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+        @media (max-width: 900px)
+            margin: 0
+        @media (max-width: 450px)
+            margin: 10px 0
+        @media (orientation: portrait) and (max-height: 540px)
+            margin: 5px 0
+        .bg 
+            position: absolute
+            top: 0
+            left: 0
+            width: 100% 
+            height: 100%
+            background-color: $dark
+            z-index: -1
+    .navBtn:nth-of-type(2)
+        transition-delay: .1s
+        border: 3px solid #4ab6e0
+        color: #4ab6e0
+    .navBtn:nth-of-type(3)
+        transition-delay: .2s
+        border: 3px solid #3b7cd1
+        color: #3b7cd1
+    .navBtn:nth-of-type(4)
+        transition-delay: .3s
+        border: 3px solid #3344bd
+        color: #3344bd
+    .navBtn:nth-of-type(5)
+        transition-delay: .4s
+        border: 3px solid #661fc2
+        color: #661fc2
+    .navBtn:nth-of-type(6)
+        transition-delay: .5s
+        border: 3px solid #7e15bf
+        color: #7e15bf
+    .navBtn:nth-of-type(7)
+        transition-delay: .6s
+        border: 3px solid #a114c4
+        color: #a114c4
+    .navBtn:nth-of-type(8)
+        transition-delay: .7s
+        border: 3px solid #cc12b9
+        color: #cc12b9
+    .hamburger 
+        position: fixed
+        left: 10px
+        top: 10px
+        width: 40px 
+        height: 40px
+        padding: 5px 0
+        background-color: transparent
+        border: 2px solid transparent
+        cursor: pointer
+        display: flex 
+        flex-direction: column
+        justify-content: space-around 
+        align-items: center
+        overflow: hidden
+        transition: .6s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+        .bar
+            width: 30px
+            height: 4px
+            background: $gradient
+            border-radius: 8px
+            transition: .8s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+            transform-origin: center center
+
+   
+.nav.active 
+    .hamburger 
+        @media (max-width: 900px)
+            transform: translateX(160px)
+        @media (max-width: 450px)
+            transform: none
+    .navBtn 
+        transform: translateX(165px)
+    .hamburger 
+        .bar1 
+            transform: translateY(9px) rotate(-40deg)
+        .bar2 
+            transform: translateX(60px)
+        .bar3
+            transform: translateY(-8.5px) rotate(40deg)

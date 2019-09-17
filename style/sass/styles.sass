@@ -5,10 +5,11 @@
     outline: none
 
 //colors 
-$green: #65eb7b
-$darkGreen: #4ecc62
+$darkBlue: #15243A
 $dark: #222422
-$lightGray: #d1d0cd
+$blue: rgb(63,94,251)
+$pink: rgb(252,70,172)
+$gradient: linear-gradient(49deg, rgba(63,94,251,1) 0%, rgba(252,70,172,1) 100%)
 
 //mixins 
 =flexCenter()
@@ -18,16 +19,65 @@ $lightGray: #d1d0cd
     flex-wrap: wrap
 
 body 
-    font-family: 'Roboto', sans-serif
+    font-family: 'Noto Sans KR', sans-serif
     color: $dark
     overflow-x: hidden
     +flexCenter()
     min-height: 100vh
     h1 
-        font-size: 80px
-        background: linear-gradient(49deg, rgba(63,94,251,1) 0%, rgba(252,70,70,1) 100%)
+        font-size: 60px
+        @media (max-width: 900px)
+            font-size: 50px
+        @media (max-width: 450px)
+            font-size: 40px
+        background: linear-gradient(49deg, rgba(63,94,251,1) 0%, rgba(252,70,172,1) 100%)
         -webkit-background-clip: text 
         -webkit-text-fill-color: transparent
+    h2 
+        font-size: 45px
+        @media (max-width: 900px)
+            font-size: 35px
+        @media (max-width: 450px)
+            font-size: 30px
+        background: linear-gradient(49deg, rgba(63,94,251,1) 0%, rgba(252,70,172,1) 100%)
+        -webkit-background-clip: text 
+        -webkit-text-fill-color: transparent
+    h3 
+        font-size: 35px
+        @media (max-width: 900px)
+            font-size: 25px
+        @media (max-width: 450px)
+            font-size: 20px
+    h4
+        font-size: 25px
+        @media (max-width: 900px)
+            font-size: 20px
+        @media (max-width: 450px)
+            font-size: 18px
+    p 
+        font-size: 20px
+        @media (max-width: 900px)
+            font-size: 18px
+        @media (max-width: 450px)
+            font-size: 16px
+.gradientBtn 
+    padding: 3px 12px
+    background: $gradient
+    color: #fff 
+    text-transform: uppercase
+    border: none 
+    border-radius: 8px
+    cursor: pointer
+    letter-spacing: 2px
+    font-size: 22px
+    transition: .3s ease-in-out
+    &:hover 
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+
+.mainSection 
+    width: 100vw 
+    min-height: 70vh
+@import 'nav'
 
 
 

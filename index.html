@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="shortcut icon" href="images/favicon.ico" />
     <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style/css/styles.css" />
@@ -19,7 +19,45 @@
     <title>PSDtoHTML#2</title>
   </head>
   <body>
-    <h1>WITAM</h1>
+    <nav class="nav">
+      <button class="hamburger">
+        <span class="bar bar1"></span>
+        <span class="bar bar2"></span>
+        <span class="bar bar3"></span>
+      </button>
+      <button class="navBtn" data-target="home">
+        home
+      </button>
+      <button class="navBtn" data-target="about">
+        about
+      </button>
+      <button class="navBtn" data-target="services">
+        services
+      </button>
+      <button class="navBtn" data-target="portfolio">
+        portfolio
+      </button>
+      <button class="navBtn" data-target="experience">
+        experience
+      </button>
+      <button class="navBtn" data-target="blog">
+        blog
+      </button>
+      <button class="navBtn" data-target="contact">
+        contact
+      </button>
+    </nav>
+
+    <main class="main">
+      <header class="header home mainSection"></header>
+      <section class="about mainSection"></section>
+      <section class="services mainSection"></section>
+      <section class="portfolio mainSection"></section>
+      <section class="experience mainSection"></section>
+      <section class="blog mainSection"></section>
+      <section class="contact mainSection"></section>
+    </main>
+
     <script src="scripts/script.js"></script>
   </body>
 </html>
