@@ -10,4 +10,23 @@ body {
   font-family: 'Roboto', sans-serif;
   color: #222422;
   overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+body h1 {
+  font-size: 80px;
+  background: linear-gradient(49deg, #3f5efb 0%, #fc4646 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
