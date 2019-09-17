@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Noto Sans KR', sans-serif;
-  color: #222422;
+  color: #15243A;
   overflow-x: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -61,7 +61,7 @@ body h2 {
 }
 
 body h3 {
-  font-size: 35px;
+  font-size: 30px;
 }
 
 @media (max-width: 900px) {
@@ -474,4 +474,217 @@ body p {
   margin-top: 20px;
   z-index: 2;
   padding: 10px 20px;
+}
+
+.about {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.about .description, .about .skills {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 20px;
+}
+
+@media (max-width: 900px) {
+  .about .description, .about .skills {
+    width: 50%;
+  }
+}
+
+@media (max-width: 450px) {
+  .about .description, .about .skills {
+    width: 90%;
+  }
+}
+
+.about h2, .about h3, .about p {
+  width: 100%;
+  text-align: center;
+}
+
+.about h3 {
+  color: #fc46ac;
+}
+
+.about .skills p {
+  position: relative;
+  width: 60%;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .about .skills p {
+    width: 80%;
+  }
+}
+
+@media (max-width: 450px) {
+  .about .skills p {
+    width: 90%;
+  }
+}
+
+.about .skills p::before, .about .skills p::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 8px;
+}
+
+.about .skills p::before {
+  left: 0;
+  background-color: #3f5efb;
+}
+
+.about .skills p::after {
+  right: 0;
+  background-color: #fc46ac;
+}
+
+.about .skills p:nth-of-type(1)::before {
+  width: 80%;
+}
+
+.about .skills p:nth-of-type(1)::after {
+  width: 20%;
+}
+
+.about .skills p:nth-of-type(2)::before {
+  width: 65%;
+}
+
+.about .skills p:nth-of-type(2)::after {
+  width: 35%;
+}
+
+.about .skills p:nth-of-type(3)::before {
+  width: 50%;
+}
+
+.about .skills p:nth-of-type(3)::after {
+  width: 50%;
+}
+
+.about .skills p:nth-of-type(4)::before {
+  width: 30%;
+}
+
+.about .skills p:nth-of-type(4)::after {
+  width: 70%;
+}
+
+.about .address {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #15243A;
+  color: #fff;
+  padding: 35px 0;
+}
+
+.about .address h3 {
+  color: #fff;
+  font-size: 22px;
+}
+
+.about .address .icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(49deg, #3f5efb 0%, #fc46ac 100%);
+  font-size: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .about .address .icon {
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 450px) {
+  .about .address .icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
+
+.about .address .phone, .about .address .place, .about .address .mail {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .about .address .phone, .about .address .place, .about .address .mail {
+    width: 90%;
+    margin: 5px 0;
+  }
+}
+
+.about .address .phone h3, .about .address .place h3, .about .address .mail h3 {
+  width: 70%;
+}
+
+@media (max-width: 450px) {
+  .about .address .phone h3, .about .address .place h3, .about .address .mail h3 {
+    font-size: 15px;
+  }
 }
