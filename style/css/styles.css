@@ -941,6 +941,7 @@ body p {
   .services .testimonials .clientImg {
     height: 70px;
     width: 70px;
+    margin-top: 20px;
   }
 }
 
@@ -950,6 +951,7 @@ body p {
 
 @media (max-width: 550px) {
   .services .testimonials h4 {
+    margin-top: 20px;
     font-size: 16px;
   }
 }
@@ -1067,16 +1069,160 @@ body p {
   }
 }
 
-.portfolio .project:hover::before, .portfolio .project.active::before {
-  background-color: rgba(21, 36, 58, 0.8);
+.portfolio .project:hover::before {
+  background-color: rgba(21, 36, 58, 0.9);
 }
 
-.portfolio .project:hover img, .portfolio .project:hover h3, .portfolio .project.active img, .portfolio .project.active h3 {
+.portfolio .project:hover img, .portfolio .project:hover h3 {
   -webkit-transform: translate(calc(-50% + 50px), -50%);
           transform: translate(calc(-50% + 50px), -50%);
 }
 
-.portfolio .project:hover .projectDescription, .portfolio .project.active .projectDescription {
+.portfolio .project:hover .projectDescription {
   -webkit-transform: translateX(150px);
           transform: translateX(150px);
+}
+
+.experience {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background: linear-gradient(49deg, #3f5efb 0%, #fc46ac 100%);
+  color: #fff;
+  overflow: hidden;
+}
+
+.experience h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.experience .exp {
+  width: 80%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-transform: translateY(350px);
+          transform: translateY(350px);
+  opacity: 0;
+}
+
+@media (max-width: 900px) {
+  .experience .exp {
+    height: 150px;
+  }
+}
+
+@media (orientation: portrait) {
+  .experience .exp {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+  }
+}
+
+.experience .exp h4, .experience .exp .date {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  width: 30%;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .experience .exp h4, .experience .exp .date {
+    width: 20%;
+  }
+}
+
+@media (max-width: 550px) and (orientation: landscape) {
+  .experience .exp h4, .experience .exp .date {
+    font-size: 15px;
+  }
+}
+
+@media (orientation: portrait) {
+  .experience .exp h4, .experience .exp .date {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+}
+
+.experience .exp .expDescription {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  width: 60%;
+}
+
+@media (max-width: 900px) {
+  .experience .exp .expDescription {
+    width: 80%;
+    padding: 20px 0 0 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .experience .exp .expDescription {
+    padding: 0 0 0 20px;
+  }
+}
+
+@media (max-width: 550px) and (orientation: landscape) {
+  .experience .exp .expDescription {
+    font-size: 15px;
+  }
+}
+
+@media (orientation: portrait) {
+  .experience .exp .expDescription {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+.experience .exp:nth-of-type(2) {
+  -webkit-transition-delay: .2s;
+          transition-delay: .2s;
+}
+
+.experience .exp:nth-of-type(3) {
+  -webkit-transition-delay: .4s;
+          transition-delay: .4s;
+}
+
+.experience.active .exp {
+  -webkit-transform: none;
+          transform: none;
+  opacity: 1;
 }

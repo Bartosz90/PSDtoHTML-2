@@ -45,7 +45,6 @@ const text =
   "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, tempora placeat aut, consectetur nihil enim et nesciunt ex quaerat corporis fuga! Atque adipisci harum porro veritatis, vel quaerat dolores.";
 
 const quote = document.querySelector(".quote");
-const testimonials = document.querySelector(".testimonials");
 let textIndex = 0;
 let typerDone = false;
 
@@ -58,6 +57,11 @@ function quoteTyper() {
   typerDone = true;
 }
 
+// animations on scroll
+
+const testimonials = document.querySelector(".testimonials");
+const experience = document.querySelector(".experience");
+
 window.addEventListener("scroll", () => {
   if (
     window.scrollY >
@@ -67,6 +71,12 @@ window.addEventListener("scroll", () => {
       100
   ) {
     if (!typerDone) quoteTyper();
+  }
+  if (
+    window.scrollY >
+    experience.offsetTop + experience.offsetHeight - window.innerHeight - 100
+  ) {
+    experience.classList.add("active");
   }
 
   // if (
@@ -85,6 +95,7 @@ window.addEventListener("scroll", () => {
     textIndex = 0;
     quote.textContent = "";
     typerDone = false;
+    experience.classList.remove("active");
     // clients.classList.remove("active");
     // offer.classList.remove("active");
     // contact.classList.remove("active");

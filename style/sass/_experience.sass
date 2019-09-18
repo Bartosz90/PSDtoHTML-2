@@ -1,0 +1,62 @@
+.experience 
+    padding: 20px 0
+    +flexCenter 
+    background: $gradient
+    color: #fff
+    overflow: hidden
+    h2 
+        width: 100% 
+        text-align: center
+        margin-bottom: 30px
+    .exp 
+        width: 80%
+        height: 100px
+        display: flex 
+        flex-direction: column 
+        justify-content: center 
+        flex-wrap: wrap
+        transition: .3s
+        transform: translateY(350px)
+        opacity: 0
+        @media (max-width: 900px)
+            height: 150px
+        @media (orientation: portrait)
+            flex-direction: row
+            align-items: center
+            height: auto
+        h4, .date
+            flex-basis: 50% 
+            width: 30%
+            text-align: center
+            @media (max-width: 900px)
+                width: 20%
+            @media (max-width: 550px) and (orientation: landscape)
+                font-size: 15px
+            @media (orientation: portrait)
+                flex-basis: 100% 
+                height: auto
+                margin-bottom: 10px
+        .expDescription 
+            flex-basis: 100%
+            width: 60%
+            @media (max-width: 900px)
+                width: 80%
+                padding: 20px 0 0 20px
+            @media (max-width: 700px)
+                padding: 0 0 0 20px
+            @media (max-width: 550px) and (orientation: landscape)
+                font-size: 15px
+            @media (orientation: portrait)
+                width: 100% 
+                height: auto
+                padding: 0
+                text-align: center
+                margin-bottom: 10px
+    .exp:nth-of-type(2)
+        transition-delay: .2s
+    .exp:nth-of-type(3)
+        transition-delay: .4s
+.experience.active 
+    .exp 
+        transform: none
+        opacity: 1
