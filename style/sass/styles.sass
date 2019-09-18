@@ -24,7 +24,7 @@ body
     overflow-x: hidden
     +flexCenter()
     min-height: 100vh
-    h1, h2, h3 
+    h1, h2, h3, h4
         text-transform: uppercase
     h1 
         font-size: 100px
@@ -68,8 +68,15 @@ body
     letter-spacing: 2px
     font-size: 22px
     transition: .3s ease-in-out
+    animation: grow 10s infinite
+    @keyframes grow 
+        50% 
+            transform: scale(1.1)
+        100% 
+            transform: none
     &:hover 
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+    
 
 .mainSection 
     width: 100vw 
@@ -78,6 +85,7 @@ body
 @import 'nav'
 @import 'header'
 @import 'about'
+@import 'services'
 
 
 
