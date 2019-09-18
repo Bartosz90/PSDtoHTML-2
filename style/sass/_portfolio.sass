@@ -1,0 +1,72 @@
+.portfolio 
+    padding-top: 40px
+    +flexCenter()
+    justify-content: space-around
+    h2 
+        width: 100% 
+        margin-bottom: 40px
+        text-align: center
+    .project 
+        position: relative
+        width: 26%
+        height: 300px
+        overflow: hidden
+        cursor: default
+        border-radius: 6px
+        margin-bottom: 40px
+        @media (max-width: 900px)
+            width: 45%
+            height: 250px
+        @media (max-width: 700px)
+            width: 85%
+        @media (orientation: portrait)
+            height: 170px
+            margin-bottom: 20px
+        &::before
+            content: ""
+            position: absolute
+            left: 0
+            top: 0
+            width: 100% 
+            height: 100%
+            background-color: rgba(21, 36, 58, .6)
+            z-index: 1
+            transition: .3s ease-in-out
+        img , h3
+            position: absolute 
+            top: 50%
+            left: 50%
+            width: 100%
+            transform: translate(-50%,-50%)
+            transition: .3s ease-in-out
+        h3 
+            z-index: 1
+            color: #fff
+            text-align: center
+            @media (orientation: portrait)
+                padding-left: 40px
+        .projectDescription 
+            position: absolute 
+            top: 0 
+            left: -150px
+            height: 100% 
+            width: 150px 
+            padding: 10px 
+            background: $gradient
+            z-index: 1
+            color: #fff
+            transition: .3s ease-in-out
+            p 
+                font-size: 19px
+                @media (orientation: portrait)
+                    font-size: 14px
+    .project:hover, .project.active
+        &::before
+            background-color: rgba(21, 36, 58, .8)
+        img , h3
+            transform: translate(calc(-50% + 50px),-50%) 
+        .projectDescription 
+            transform: translateX(150px)
+        
+
+            

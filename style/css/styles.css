@@ -921,6 +921,7 @@ body p {
 @media (max-width: 450px) {
   .services .testimonials .quote {
     width: 75%;
+    font-size: 20px;
   }
 }
 
@@ -951,4 +952,131 @@ body p {
   .services .testimonials h4 {
     font-size: 16px;
   }
+}
+
+.portfolio {
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.portfolio h2 {
+  width: 100%;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.portfolio .project {
+  position: relative;
+  width: 26%;
+  height: 300px;
+  overflow: hidden;
+  cursor: default;
+  border-radius: 6px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 900px) {
+  .portfolio .project {
+    width: 45%;
+    height: 250px;
+  }
+}
+
+@media (max-width: 700px) {
+  .portfolio .project {
+    width: 85%;
+  }
+}
+
+@media (orientation: portrait) {
+  .portfolio .project {
+    height: 170px;
+    margin-bottom: 20px;
+  }
+}
+
+.portfolio .project::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(21, 36, 58, 0.6);
+  z-index: 1;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.portfolio .project img, .portfolio .project h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.portfolio .project h3 {
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+}
+
+@media (orientation: portrait) {
+  .portfolio .project h3 {
+    padding-left: 40px;
+  }
+}
+
+.portfolio .project .projectDescription {
+  position: absolute;
+  top: 0;
+  left: -150px;
+  height: 100%;
+  width: 150px;
+  padding: 10px;
+  background: linear-gradient(49deg, #3f5efb 0%, #fc46ac 100%);
+  z-index: 1;
+  color: #fff;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.portfolio .project .projectDescription p {
+  font-size: 19px;
+}
+
+@media (orientation: portrait) {
+  .portfolio .project .projectDescription p {
+    font-size: 14px;
+  }
+}
+
+.portfolio .project:hover::before, .portfolio .project.active::before {
+  background-color: rgba(21, 36, 58, 0.8);
+}
+
+.portfolio .project:hover img, .portfolio .project:hover h3, .portfolio .project.active img, .portfolio .project.active h3 {
+  -webkit-transform: translate(calc(-50% + 50px), -50%);
+          transform: translate(calc(-50% + 50px), -50%);
+}
+
+.portfolio .project:hover .projectDescription, .portfolio .project.active .projectDescription {
+  -webkit-transform: translateX(150px);
+          transform: translateX(150px);
 }
