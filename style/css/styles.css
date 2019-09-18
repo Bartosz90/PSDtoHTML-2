@@ -1226,3 +1226,122 @@ body p {
           transform: none;
   opacity: 1;
 }
+
+.blog {
+  width: 100vw;
+  min-height: 500px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.blog h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.blog .owl-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.blog .arrowBtn {
+  font-size: 50px;
+  margin: 0 30px;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+@media (min-width: 1000px) {
+  .blog .arrowBtn:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@media (max-width: 900px) {
+  .blog .arrowBtn {
+    font-size: 35px;
+  }
+}
+
+.blog .blogContent {
+  position: relative;
+  width: 30vw;
+  height: 250px;
+  padding: 15px;
+  margin: 0 auto;
+  background-color: #000;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (max-width: 900px) {
+  .blog .blogContent {
+    width: 45vw;
+  }
+}
+
+@media (orientation: portrait) {
+  .blog .blogContent {
+    width: 90vw;
+  }
+}
+
+.blog .blogContent::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(21, 36, 58, 0.8);
+  z-index: 1;
+}
+
+.blog .blogContent h3, .blog .blogContent p {
+  text-align: center;
+  z-index: 2;
+  color: #fff;
+}
+
+.blog .blogContent1 {
+  background-image: url("../../images/blog1.jpg");
+}
+
+.blog .blogContent2 {
+  background-image: url("../../images/blog2.jpg");
+}
+
+.blog .blogContent3 {
+  background-image: url("../../images/blog3.jpg");
+}
+
+.blog .blogContent4 {
+  background-image: url("../../images/blog4.jpg");
+}
+
+.blog .blogContent5 {
+  background-image: url("../../images/blog5.png");
+}

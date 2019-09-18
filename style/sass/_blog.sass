@@ -1,0 +1,59 @@
+.blog 
+    width: 100vw 
+    min-height: 500px
+    margin: 0 auto
+    padding-top: 30px
+    h2 
+        text-align: center
+        margin-bottom: 30px
+    .owl-nav
+        +flexCenter()
+        margin: 20px 0
+    .arrowBtn 
+        font-size: 50px
+        margin: 0 30px
+        transition: .3s ease-in-out
+        @media (min-width: 1000px)
+            &:hover 
+                transform: scale(1.1)
+        @media (max-width: 900px)
+            font-size: 35px
+    .blogContent
+        position: relative
+        width: 30vw
+        height: 250px 
+        padding: 15px
+        margin: 0 auto
+        background-color: #000
+        color: #fff
+        +flexCenter()
+        background-position: center 
+        background-size: cover
+        @media (max-width: 900px)
+            width: 45vw
+        @media (orientation: portrait)
+            width: 90vw
+        
+        &::before
+            content: ""
+            position: absolute 
+            left: 0
+            top: 0
+            height: 100%
+            width: 100% 
+            background-color: rgba(21, 36, 58, .8)
+            z-index: 1
+        h3, p 
+            text-align: center
+            z-index: 2
+            color: #fff
+    .blogContent1
+        background-image: url('../../images/blog1.jpg')
+    .blogContent2
+        background-image: url('../../images/blog2.jpg')
+    .blogContent3
+        background-image: url('../../images/blog3.jpg')
+    .blogContent4
+        background-image: url('../../images/blog4.jpg')
+    .blogContent5
+        background-image: url('../../images/blog5.png')

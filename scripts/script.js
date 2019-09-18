@@ -101,3 +101,29 @@ window.addEventListener("scroll", () => {
     // contact.classList.remove("active");
   }
 });
+
+// Owl carousel
+
+$(document).ready(function() {
+  $(".owl-carousel").owlCarousel();
+});
+
+$(".owl-carousel").owlCarousel({
+  loop: true,
+  center: true,
+  margin: 10,
+  nav: true,
+  navText: [
+    `<i class="fas fa-arrow-left arrowBtn"></i>`,
+    `<i class="fas fa-arrow-right arrowBtn"></i>`
+  ],
+  responsive: {
+    0: {
+      items: 1,
+      margin: 0
+    },
+    450: {
+      items: 2
+    }
+  }
+});
