@@ -78,27 +78,11 @@ window.addEventListener("scroll", () => {
   ) {
     experience.classList.add("active");
   }
-
-  // if (
-  //   window.scrollY >
-  //   offer.offsetTop + offer.offsetHeight - window.innerHeight - 100
-  // ) {
-  //   offer.classList.add("active");
-  // }
-  // if (
-  //   window.scrollY >
-  //   contact.offsetTop + contact.offsetHeight - window.innerHeight - 400
-  // ) {
-  //   contact.classList.add("active");
-  // }
   if (window.scrollY < 100) {
     textIndex = 0;
     quote.textContent = "";
     typerDone = false;
     experience.classList.remove("active");
-    // clients.classList.remove("active");
-    // offer.classList.remove("active");
-    // contact.classList.remove("active");
   }
 });
 
@@ -124,6 +108,9 @@ $(".owl-carousel").owlCarousel({
     },
     450: {
       items: 2
+    },
+    1024: {
+      items: 3
     }
   }
 });

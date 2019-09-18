@@ -1,0 +1,56 @@
+.footer 
+    width: 100vw 
+    padding: 10px 0
+    +flexCenter()
+    background-color: $darkBlue
+    .author 
+        width: 50%
+        text-align: center 
+        font-size: 18px
+        text-transform: none
+        +flexCenter()
+        color: #fff
+        a 
+            margin-left: 10px
+            text-decoration: underline
+            font-size: 22px
+            background: linear-gradient(50deg, rgba(63,94,251,1) 0%, rgba(252,70,172,1) 100%)
+            -webkit-background-clip: text 
+            -webkit-text-fill-color: transparent
+            animation: shake 3s infinite 
+            @keyframes shake 
+                2% 
+                    transform: rotate(10deg)
+                4% 
+                    transform: rotate(-10deg)
+                6% 
+                    transform: rotate(10deg)
+                8% 
+                    transform: rotate(-10deg)
+                10% 
+                    transform: none
+                100% 
+                    transform: none
+    .socials 
+        width: 50%
+        +flexCenter()
+        font-size: 20px
+        @media (orientation: portrait)
+            width: 100%
+            margin-top: 10px
+        a 
+            position: relative
+            width: 42px 
+            height: 42px
+            background: $gradient
+            margin: 0 20px
+            text-decoration: none 
+            color: #fff
+            border-radius: 50%
+            +flexCenter()
+            transition: .3s
+            &:hover 
+                box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+                    
+                
+        
