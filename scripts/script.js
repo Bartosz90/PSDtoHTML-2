@@ -49,12 +49,13 @@ let textIndex = 0;
 let typerDone = false;
 
 function quoteTyper() {
+  typerDone = true;
   const quoteInterval = setInterval(() => {
-    if (textIndex === text.length - 1) clearInterval(quoteInterval);
+    if (textIndex === text.length - 1 || window.scrollY < 200)
+      clearInterval(quoteInterval);
     quote.textContent += text[textIndex];
     textIndex++;
   }, 20);
-  typerDone = true;
 }
 
 // animations on scroll
@@ -78,9 +79,9 @@ window.addEventListener("scroll", () => {
   ) {
     experience.classList.add("active");
   }
-  if (window.scrollY < 100) {
-    textIndex = 0;
+  if (window.scrollY < 200) {
     quote.textContent = "";
+    textIndex = 0;
     typerDone = false;
     experience.classList.remove("active");
   }
